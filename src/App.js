@@ -26,7 +26,7 @@ function App() {
 
     try {
       const response = await axios.get(
-        `http://localhost:3000/ads?date_preset=${datePreset}&limit=${limit}`
+        `${process.env.REACT_APP_API_URL}/ads?date_preset=${datePreset}&limit=${limit}`
       )
       const { success } = await response.data
 
