@@ -28,7 +28,7 @@ function App() {
       const response = await axios.get(
         `${process.env.REACT_APP_API_URL}/ads?date_preset=${datePreset}&limit=${limit}`
       )
-      const { success } = await response.data
+      const { success, error } = await response.data
 
       setLoading(false)
 
@@ -37,6 +37,8 @@ function App() {
         : 'An error has occurred. Please try again!'
 
       setApiMessage(message)
+
+      console.log(error)
     } catch (error) {
       console.log(error)
     }
