@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font: normal normal 100%/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #020402;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  width: 90%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 6rem 2rem;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
+.logo {
+  width: 60%;
+  margin-bottom: 2rem;
+}
+
+.description {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+select {
+  display: block;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #007be0;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: initial;
+}
+
+.api-message {
+  font-size: 1rem;
+  color: #db222a;
+  margin-top: 4rem;
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #023e6e; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: 4rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .app {
+    width: 50%;
+  }
+
+  .logo {
+    width: 30%;
   }
 }
