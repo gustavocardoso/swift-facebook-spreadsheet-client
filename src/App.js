@@ -20,15 +20,15 @@ function App() {
 
   const handleSubmit = async e => {
     e.preventDefault()
+
     setLoading(true)
     setApiMessage(null)
-    console.log(limit, datePreset)
 
     try {
       const response = await axios.get(
         `${process.env.REACT_APP_API_URL}/ads?date_preset=${datePreset}&limit=${limit}`
       )
-      const { success, error } = await response.data
+      const { success } = await response.data
 
       setLoading(false)
 
