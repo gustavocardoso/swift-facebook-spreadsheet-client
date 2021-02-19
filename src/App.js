@@ -37,6 +37,8 @@ function App() {
         : 'An error has occurred. Please try again!'
 
       setApiMessage(message)
+
+      if (error) console.log(error)
     } catch (error) {
       console.log(error)
     }
